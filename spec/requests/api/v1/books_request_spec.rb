@@ -6,8 +6,8 @@ RSpec.describe 'The books API' do
 
     get '/api/v1/books'
 
+    # this variable will represent the top level key data
     response_body = JSON.parse(response.body, symbolize_names: true)
-
     books = response_body[:data]
 
     expect(response).to be_successful
